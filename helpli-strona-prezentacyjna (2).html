@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helpli — Mniej ręcznego odpisywania</title>
+<style>
+:root{--ink:#17332d;--muted:#61736d;--green:#176b55;--mint:#e9f3ee;--paper:#fbfcfa;--line:#e3ebe6;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+header{height:92px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:40px;font-weight:900;letter-spacing:-1.7px;line-height:1}.logo span{color:var(--green)}
+nav a{color:var(--muted);text-decoration:none;margin-left:26px;font-size:14px}
+.hero{padding:76px 0 64px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.kicker{display:inline-block;background:var(--mint);color:var(--green);padding:6px 12px;border-radius:99px;font-size:13px;font-weight:700}
+h1{font-size:clamp(38px,5vw,58px);line-height:1.08;letter-spacing:-2.2px;margin:20px 0}
+.lead{font-size:19px;color:var(--muted);max-width:550px}
+.cta{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:13px 22px;border-radius:12px;font-weight:700;margin-top:18px}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+.preview{background:white;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 18px 55px #17332d12}
+.preview-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:17px;border-bottom:1px solid var(--line);font-weight:750}
+.pill{background:#edf5f0;color:var(--green);padding:4px 10px;border-radius:30px;font-size:12px}
+.message{background:#f5f8f6;border-radius:14px;padding:16px;margin:18px 0}
+.small{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+.message p{margin:6px 0 0}
+.reply{border:1px solid var(--line);border-radius:14px;padding:16px}
+.reply p{margin:7px 0 0;color:#40554e}
+.steps{padding:65px 0;background:var(--mint)}
+h2{font-size:34px;line-height:1.2;letter-spacing:-1px;margin:0 0 12px}
+.sub{color:var(--muted);margin:0 0 30px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid #dce9e1;border-radius:16px;padding:22px}
+.num{width:34px;height:34px;border-radius:10px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-weight:800}
+.card h3{margin:14px 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+.benefits{padding:68px 0}.benefit-row{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.checks{padding:0;list-style:none}.checks li{margin:13px 0;color:var(--muted)}.checks li:before{content:"✓";color:var(--green);font-weight:900;margin-right:10px}
+.bottom{background:#173b32;color:white;padding:54px 0;text-align:center}.bottom p{color:#d2e0da;margin:10px auto;max-width:570px}
+.bottom .cta{background:white;color:var(--green)}
+footer{padding:22px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between}
+@media(max-width:760px){header{height:82px}.logo{font-size:34px}nav{display:none}.hero{grid-template-columns:1fr;padding:48px 0;gap:30px}.cards{grid-template-columns:1fr}.benefit-row{grid-template-columns:1fr}h1{letter-spacing:-1.5px}.preview{padding:17px}footer{display:block}}
+</style>
+</head>
+<body>
+<header class="wrap"><div class="logo">Helpli</div><nav><a href="#jak">Jak to działa</a><a href="#korzysci">Korzyści</a><a href="#kontakt">Kontakt</a></nav></header>
+<main>
+<section class="hero wrap">
+<div><span class="kicker">Spokojniejsza obsługa klientów</span>
+<h1>Dobra obsługa klienta zaczyna się od dobrej odpowiedzi.</h1>
+<p class="lead">Helpli pomaga uporządkować wiadomości od klientów i przygotować jasne, profesjonalne propozycje odpowiedzi. Ty sprawdzasz treść i decydujesz, co wysłać.</p>
+<a class="cta" href="#kontakt">Dowiedz się więcej</a>
+<p class="note">Mniej chaosu w skrzynce. Więcej czasu na prowadzenie firmy. Pełna kontrola po Twojej stronie.</p></div>
+<div class="preview" aria-label="Przykład propozycji odpowiedzi">
+<div class="preview-top"><span>Przykład wiadomości</span><span class="pill">Podgląd</span></div>
+<div class="message"><div class="small">Wiadomość od klienta</div><p>„Dzień dobry, chciałbym zapytać o możliwość wykonania usługi. Czy mogą Państwo podać szczegóły?”</p></div>
+<div class="small">Propozycja odpowiedzi</div>
+<div class="reply"><strong>Dzień dobry!</strong><p>Dziękujemy za wiadomość i zainteresowanie naszą ofertą. Chętnie poznamy kilka szczegółów, aby przygotować dokładną odpowiedź. Prosimy o krótkie opisanie zakresu usługi.</p></div>
+<p class="note">Przykład poglądowy — przed wysłaniem odpowiedź sprawdza firma.</p>
+</div>
+</section>
+<section class="steps" id="jak"><div class="wrap"><h2>Jak to działa?</h2><p class="sub">Trzy proste kroki. Bez skomplikowanej obsługi.</p>
+<div class="cards">
+<article class="card"><div class="num">1</div><h3>Otrzymujesz wiadomość</h3><p>Wiadomości od klientów trafiają do uporządkowanego miejsca.</p></article>
+<article class="card"><div class="num">2</div><h3>Dostajesz pomocną propozycję</h3><p>System pomaga zrozumieć zapytanie i przygotowuje szkic odpowiedzi.</p></article>
+<article class="card"><div class="num">3</div><h3>Sprawdzasz i decydujesz</h3><p>Możesz poprawić propozycję. To Ty decydujesz, czy i kiedy ją wysłać.</p></article>
+</div></div></section>
+<section class="benefits wrap" id="korzysci"><div class="benefit-row"><div><h2>Klienci zasługują na szybką i przemyślaną odpowiedź</h2><p class="sub">Dla firm każdej wielkości i z każdej branży, które chcą lepiej zadbać o kontakt z klientami.</p></div>
+<ul class="checks"><li>Mniej czasu spędzonego na pisaniu podobnych odpowiedzi</li><li>Łatwiej zauważyć, jakich informacji brakuje</li><li>Jasny, profesjonalny styl komunikacji</li><li>To firma zatwierdza odpowiedź przed wysłaniem</li></ul></div><p class="note">Helpli ma wspierać Twój zespół, a nie zastępować jego decyzje. Każdą propozycję można sprawdzić i poprawić przed wysłaniem.</p></section>
+<section class="bottom" id="kontakt"><div class="wrap"><h2>Zadbaj o lepszy kontakt z klientami</h2><p>Poznaj Helpli i sprawdź, jak może pomóc Twojej firmie odpowiadać klientom sprawniej, uważniej i bardziej profesjonalnie.</p><a class="cta" href="mailto:kontakt@odpowiedzpro.pl?subject=Odpowied%C5%BAPro%20-%20pro%C5%9Bba%20o%20kontakt">Napisz do nas</a><p class="note" style="color:#d2e0da">Adres e-mail jest przykładowy — przed publikacją podmień go na własny.</p></div></section>
+</main>
+<footer class="wrap"><span>© 2026 Helpli</span><span>Mądrzejszy sposób na codzienny kontakt z klientami.</span></footer>
+</body></html>
